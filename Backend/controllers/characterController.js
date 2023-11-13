@@ -1,5 +1,5 @@
 require("mongoose");
-const Character = require("../models/charaterModel");
+const Character = require("../models/characterModel");
 const Usr = require("../models/userModel");
 
 const getAllCharacters = async (limit, offset) => {
@@ -26,33 +26,28 @@ const getCharactersByUser = async (userId) => {
 };
 
 const createCharacter = async (
-  nombre,
-  rostro,
-  partSup,
-  partInf,
-  zapas,
-  idPersonaje,
-  idUsuario
+  characterId,
+  name,
+  faceImage,
+  upperBody,
+  lowerBody,
+  shoes,
+  createdBy
 ) => {
-  const user = await Usr.findById(userId);
+  const character = new Character({
+    characterId: characterId,
+    name: name,
+    faceImage: faceImage,
+    upperBody: upperBody,
+    lowerBody: lowerBody,
+    shoes: shoes,
+    createdBy: createdBy,
+  });
 
-  if (!user) {
-    return false;
-  } else {
-    const character = new Character({
-      nombre: nombre,
-      rostro: rostro,
-      partSup: partSup,
-      partInf: partInf,
-      zapas: zapas,
-      createdBy: idUsuario,
-      idPersonaje: idPersonaje,
-    });
-    let createdCharacter = await character.save();
-    console.log("Personaje nuevo");
-    console.log(createdCharacter);
-    return { createdCharacter };
-  }
+  let createdCharacter = await character.save();
+  console.log("Personaje nuevo");
+  console.log(createdCharacter);
+  return { createdCharacter };
 };
 
 const editCharacter = async (character) => {
