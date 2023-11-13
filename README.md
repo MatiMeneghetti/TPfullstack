@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # tpFullstack
 
 <h1> PERSONAJES PARA NIÑOS </h1>.
@@ -12,10 +13,23 @@ Se desarrollará una aplicación del tipo API REST con Node.js.
 Para la persistencia de datos se utilizará la base de datos no relacional MongoDB, utilizando la versión Atlas para no descargar el motor de base de datos localmente.
 
 Paquetes a utilizar:
+=======
+# Fullstack
+Fullstack web development UP 2023
+Trabajo
+Primer entrega: desarrollo del Backend. Segunda entrega: Frontend.
+
+Tecnologías
+Desarrollaremos una aplicación del tipo API REST con Node.js. Para la persistencia de datos, utilizaremos la base de datos no relacional MongoDB, aprovechando la versión Atlas para evitar la necesidad de descargar el motor de base de datos localmente.
+
+Paquetes a Utilizar:
+
+>>>>>>> origin/main
 Express
 Mongoose
 Dotenv
 Cors
+<<<<<<< HEAD
 
 <h3>ESTRUCTURA DEL PROYECTO</h3>
 
@@ -32,10 +46,23 @@ Controladores:
 
 UserController
 
+=======
+Estructura del Proyecto
+Backend: Utilizaremos el patrón Modelo-Vista-Controlador (MVC).
+
+Modelos:
+
+Usuario (user)
+Personaje (character)
+Controladores:
+
+UserController
+>>>>>>> origin/main
 CharacterController
 
 Endpoints:
 
+<<<<<<< HEAD
 Para cada uno de los modelos se generarán los endpoints que permitirán la realización del CRUD
 
 GET, POST, PUT, DELETE
@@ -64,3 +91,14 @@ ENDPOINTS PARA LOS PERSONAJES:
 El sistema perimitira el CRUD de usuarios, creando personajes y eligiendo su vestimenta.
 
 Se deberá poder ver los últimos personajes creados
+=======
+Para cada uno de los modelos, generaremos los endpoints que permitirán la realización del CRUD:
+
+Endpoints para los usuarios:
+/login
+/users (dentro de este se encuentran los get, post, put y delete de los usuarios)
+
+Endpoints para los Personajes:
+
+/characters (Dentro estan los get, post, put y delete para los personajes)
+>>>>>>> origin/main
